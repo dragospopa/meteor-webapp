@@ -31,10 +31,10 @@ RUN apt-get install apt-utils -y
 RUN apt-get install imagemagick libmagick++-dev  libmagick++-6.q16-dev -y
 ENV PATH /usr/lib/x86_64-linux-gnu/ImageMagick-6.8.9/bin-Q16:$PATH
 
-#ENV APP_TMP /tmp
-#WORKDIR $APP_TMP
-#COPY . $APP_TMP
-#RUN chown -R $USER:$USER $APP_TMP
+ENV APP_TMP /tmp
+WORKDIR $APP_TMP
+COPY . $APP_TMP
+RUN chown -R $USER:$USER $APP_TMP
 USER $USER
 
 # set NPM stuff
