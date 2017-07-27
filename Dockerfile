@@ -7,7 +7,7 @@ ADD . /opt/meteor-webapp/app
 # Install NPM packages
 WORKDIR /opt/meteor-webapp/app/
 
-RUN meteor build --directory build --server-only
+RUN meteor build --directory build --server-only --allow-superuser
 WORKDIR /opt/meteor-webapp/app/build/bundle/programs/server
 RUN npm install 
 
