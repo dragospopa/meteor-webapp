@@ -55,6 +55,6 @@ RUN meteor build --server-only --architecture=os.linux.x86_64 build
 RUN tar -xf build/tmp.tar.gz --strip-components=1 -C $APP_HOME
 
 # install NPM packages
-#RUN cd programs/server
-RUN npm install
-WORKDIR $APP_HOME
+RUN cd programs/server
+#RUN npm install
+#WORKDIR $APP_HOME
