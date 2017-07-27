@@ -47,11 +47,11 @@ ENV ROOT_URL http://www.example.com
 # RUN npm config set registry $CUSTOM_REGISTRY
 
 #install npm packages first
-RUN meteor npm install --production
+RUN meteor npm install
 
 # build the distribution and deploy in app dir
 RUN meteor build --server-only --architecture=os.linux.x86_64 --directory build
-
+RUN cd bundle
 RUN (cd build/programs/server && npm install --unsafe-perm)
 #RUN tar -xf build/tmp.tar.gz --strip-components=1 -C $APP_HOME
 
