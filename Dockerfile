@@ -51,8 +51,8 @@ RUN meteor npm install
 
 # build the distribution and deploy in app dir
 RUN meteor build --directory build #--server-only --architecture=os.linux.x86_64 --directory build
-RUN cd build/bundle/
-RUN (cd programs/server/ && npm install --unsafe-perm)
+WORKDIR build/bundle/programs/server
+RUN npm install --unsafe-perm
 #RUN tar -xf build/tmp.tar.gz --strip-components=1 -C $APP_HOME
 
 WORKDIR $APP_HOME
