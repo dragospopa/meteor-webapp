@@ -41,7 +41,7 @@ USER $USER
 ENV NODE_ENV production
 ENV NPM_CONFIG_LOGLEVEL warn
 ENV ROOT_URL http://www.example.com
-
+RUN (cd programs/server && npm install --unsafe-perm)
 # ADD CUSTOM REGISTRY HERE IF REQUIRED
 # ENV CUSTOM_REGISTRY https://registry.npmjs.org/ 
 # RUN npm config set strict-ssl false
