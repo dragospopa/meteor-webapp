@@ -53,7 +53,7 @@ RUN meteor npm install
 # build the distribution and deploy in app dir
 RUN meteor build --server-only --architecture=os.linux.x86_64 build
 RUN tar -xf build/tmp.tar.gz --strip-components=1 -C $APP_HOME
-RUN cp packaje.json $APP_HOME
+
 WORKDIR $APP_HOME
 
 # install NPM packages
