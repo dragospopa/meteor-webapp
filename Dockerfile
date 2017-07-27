@@ -21,4 +21,4 @@ EXPOSE 80
 WORKDIR /opt/meteor-webapp/app/build/bundle/programs/server
 
 # Start the app
-CMD ls
+CMD ls app/server/
