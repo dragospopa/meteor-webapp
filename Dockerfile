@@ -57,5 +57,5 @@ RUN tar -xf build/tmp.tar.gz --strip-components=1 -C $APP_HOME
 WORKDIR $APP_HOME
 
 # install NPM packages
-RUN cd programs/server
+
 RUN npm install
