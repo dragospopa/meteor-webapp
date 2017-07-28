@@ -7,5 +7,4 @@ ENV PORT 3000
 
 EXPOSE 3000
 
-CMD ls 
-#CMD node server/main.js
+CMD node ./main.js
