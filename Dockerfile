@@ -7,4 +7,4 @@ ENV PORT 3000
 
 EXPOSE 3000
 
-CMD node programs/server/main.js
+CMD ls programs/server/
