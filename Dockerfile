@@ -6,5 +6,3 @@ ENV MONGO_OPLOG_URL mongodb://oplog_url
 ENV PORT 3000
 
 EXPOSE 3000
-
-CMD ls programs/server/
